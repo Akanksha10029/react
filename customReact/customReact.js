@@ -1,11 +1,18 @@
 const customRender = (customElement, Container) => {
-  const element = document.createElement(customElement.type);
-  element.setAttribute("href", customElement.props.href);
-  element.setAttribute("style", customElement.props.style);
-  element.setAttribute("target", customElement.props.target);
-  element.innerHTML = customElement.children;
+//   const element = document.createElement(customElement.type);
+//   element.innerHTML = customElement.children;
+//   element.setAttribute("href", customElement.props.href);
+//   element.setAttribute("style", customElement.props.style);
+//   element.setAttribute("target", customElement.props.target);
+//   Container.appendChild(element);
 
-  Container.appendChild(element);
+    const element = document.createElement(customElement.type);
+    element.innerHTML = customElement.children;
+    for (let prop in customElement.props) {
+        element.setAttribute(prop, customElement.props[prop]);
+    }
+    Container.appendChild(element);
+
 };
 const customElement = {
   type: "a",
