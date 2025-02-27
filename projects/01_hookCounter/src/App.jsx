@@ -7,10 +7,10 @@ function App() {
   const [count, setCount] = useState(0)
   const incrementCounter = ()=>{
     if(count<20){
-      setCount(count+1)
+      setCount(count => count+1)
+      setCount(count => count+1)
       console.log(count);      
-    }
-    
+    } 
   }
   const decrementCounter = ()=>{
     if(count>0){
