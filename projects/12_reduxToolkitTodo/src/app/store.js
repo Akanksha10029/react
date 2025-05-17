@@ -1,0 +1,7 @@
+import {configureStore} from '@reduxjs/toolkit'
+import todoReducer from '../features/todo/todoSlice'
+export const store = configureStore({
+    reducer: todoReducer  
+})
+ //configureStore is a function that takes an object as an argument and returns a store. The object can contain the following properties: reducer, middleware, devTools, preloadedState, enhancers, and thunk. The reducer property is required and is used to create the store. The middleware property is used to add middleware to the store. The devTools property is used to enable the Redux DevTools extension. The preloadedState property is used to set the initial state of the store. The enhancers property is used to add enhancers to the store. The thunk property is used to add thunk middleware to the store.
+// The configureStore function is a utility function that simplifies the process of creating a Redux store. It automatically sets up the store with good defaults, such as enabling the Redux DevTools extension and adding thunk middleware for handling asynchronous actions. The configureStore function also allows you to easily add custom middleware and enhancers to the store. Overall, configureStore is a convenient way to create a Redux store with minimal configuration.
